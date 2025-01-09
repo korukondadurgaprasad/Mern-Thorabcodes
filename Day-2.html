@@ -1,0 +1,119 @@
+<!-- // do while loop -->/
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Do While Loop</h1>
+
+    <script>
+        // let i = 0;
+        // do {
+        //     console.log(i);
+        //     i++
+        // }
+        // while (i < 5);
+
+
+
+
+
+        // // For Loop 
+
+
+        // for (let g=0;g<10;g++){
+        //     console.log(g*2)
+        // }
+
+
+        // functions
+
+        // camelCase
+        // PascalCase
+        // snake_case
+
+        function doSomething() {
+            console.log("Hello Line one")
+            console.log("Hello Line two")
+
+
+            // return 23;
+        }
+
+        // let a=doSomething()
+        // console.log(a)
+
+        doSomething()
+
+
+
+        // Arrays
+
+
+        // let num=24
+        // let fname="Prasad"
+
+
+        let nums =[23,45,67,89];
+        let names=["Prasad","Rahul","Rohan","Rahul"]
+        let mixed=[23,"Prasad",true,45.67, null, undefined]
+        let empty=[];
+        let singleElement=[1];
+        console.log(nums[3])
+        console.log(names[2])
+
+        for (let i=0;i<nums.length;i++){
+            console.log(nums[i])
+        }
+
+
+        // Object -- collection of relaeted properties 
+
+        let student ={
+            name:"Prasad",
+            age:23,
+            marks:90,
+            hobbies:["Cricket","Football","Reading"],
+            address:{
+                street:"Street 1",
+                city:"City 1",
+                state:"State 1",
+                country:"Country 1"
+                }
+                }
+                console.log(student.name)
+                console.log(student.address.street)
+                console.log(student.hobbies[0])
+                console.log(student.address.country)
+                student.name="Rahul"
+              console.log(student.name)
+             student.address.street="Street 2"
+                console.log(student.address.street)
+                student.hobbies.push("Dancing")
+                console.log(student.hobbies)
+                console.log(student.address.country)
+
+
+
+                console.log(student)
+                console.log(JSON.stringify(student))
+
+    
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
