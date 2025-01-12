@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // call back
+
+        // function doSomething(n)
+        // {
+        //     console.log("hi");
+        //     n();
+        // }
+
+        // function demo()
+        // {
+        //     console.log("Hello from demo function");
+        // }
+    
+        // doSomething(demo)
+
+
+        function doSomething(n)
+        {
+            console.log("hi");
+            n();
+        }
+
+        // function demo()
+        // {
+        //     console.log("Hello from demo function");
+        // }
+    
+        doSomething(function(){
+            console.log("Hello from demo function");
+        })
+
+        // Usecases
+
+        function getUserdata(task){
+            //calling the network and getting user data
+            let data =[23,45,6,7,8,9]
+            // firstly get the data from user
+            task(data)
+
+        }
+
+        getUserdata(function(Userdata){
+            console.log(Userdata);
+            // by using call back iam using the use data to perform diffrent operations
+        })
+
+        getUserdata(function(Userdata){
+            // excel sheet generation
+        })
+
+
+
+
+
+
+
+        // 
+        // Js is a single threadead language---run the code line by line synscronous manner this is aslo called as the blocking code .
+       // Js engine--call stack(load the code line by line and print the output and delete it from call stack)---GEC(global execution context)(responsible for execution of code line by line )
+       //synchronus manner means the page is loaded the page 3 lodes when tha page 2 succesfullt load .(load -successfully show the output)
+        console.log("Line 1");
+        console.log("Line 2");
+        for(let i=1;i<10;i++){
+           console.log(i);
+        }
+        console.log("Line 3");
+
+        function a(){
+            console.log("I am a function")
+        }
+        a();
+
+        console.log("I am a line of code");
+
+        // we have webapis here to solve the issue 
+        // settimeout and setinterval are the responsible when a code is taking more time .In js webapis tkaes that code which is taking more time  and load at some other webbroser 
+
+        console.log("Line 1")
+        setTimeout(function(){
+            console.log("Line 3")
+        },5000)
+
+        console.log("Line 4")
+        // call back queue - which store the data of webapi .
+        //event loop - something that pulls the stuff outof the queue an store it in callbak,.
+        // gec intialise and line 1 got exceute and show the output and
+        //  then line 2 get executed and setTimeout goes to webapis now goes for the line 3 excution when thses excution were the done 
+        // the event loop keep track of eevrything that checks anything is not printed the call back queue conatin the output of webapi this loop 
+        // job to take this function into the xall stack again.
+
+
+
+    </script>
+    
+</body>
+</html>
