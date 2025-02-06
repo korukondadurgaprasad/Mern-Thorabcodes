@@ -34,6 +34,8 @@ const os =require('os');
 // }) 
 // removing the past a data and adding new data appale is replaced with mango
 
+
+
 // fs.appendFile('./products.txt','\nGrapes',(err)=>{
 //     console.log(err);
 // })
