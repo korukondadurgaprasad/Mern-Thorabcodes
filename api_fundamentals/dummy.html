@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        let prod = {
+            "id": 99,
+            "title": "MacBook Pro",
+            "description": "MacBook Pro 2021 with mini-LED display may launch between September, November",
+            "price": 1749,
+            "discountPercentage": 11.02,
+            "rating": 4.57,
+            "stock": 83,
+            "brand": "Apple",
+            "category": "laptops",
+            "thumbnail": "https://i.dummyjson.com/data/products/6/thumbnail.png",
+            "images": [
+                "https://i.dummyjson.com/data/products/6/1.png",
+                "https://i.dummyjson.com/data/products/6/2.jpg",
+                "https://i.dummyjson.com/data/products/6/3.png",
+                "https://i.dummyjson.com/data/products/6/4.jpg"
+            ]
+        };
+        fetch("http://127.0.0.1:8000/products", {
+            method: "POST",
+            body: JSON.stringify(prod),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+            .then((response) => {
+                console.log("Response received:", response);
+                return response.json();
+            })
+            .then((data) => {
+                console.log("Data received:", data);
+            })
+            .catch((err) => {
+                console.log("Fetch error:", err);
+            });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
