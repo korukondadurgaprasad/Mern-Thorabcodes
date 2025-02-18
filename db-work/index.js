@@ -2,9 +2,8 @@
 // Mongoose is an Object Data Modeling (ODM) library for MongoDB in Node.js. 
 // It provides a structured way to interact with MongoDB databases by defining schemas and models for data.
 
-const { ConnectionCheckOutFailedEvent } = require('mongodb')
 const mongoose = require('mongoose')
-const { type } = require('os')
+
 // connection to mongo server
 
 mongoose.connect('mongodb://localhost:27017/apidev_demo')
@@ -67,24 +66,26 @@ const userModel = mongoose.model('users', userSchema);
 
 // inserting data
 
-let user = {
-    name: "thor",
-    age: 28,
-    password:23456,
-    email: "prasad@gmail.com",
-    role: "admin"
+// let user = {
+//     name: "thor",
+//     age: 28,
+//     password:23456,
+//     email: "prasad@gmail.com",
+//     role: "admin"
 
-}
+// }
 
-userModel.create(user)
-    .then((data) => {
-        console.log(data)
-        console.log("Data Inserted")
 
-    })
-    .catch((err) => {
-        console.log(err)
-    })
+
+// userModel.create(user)
+//     .then((data) => {
+//         console.log(data)
+//         console.log("Data Inserted")
+
+//     })
+//     .catch((err) => {
+//         console.log(err)
+//     })
 
 
 
