@@ -220,6 +220,7 @@ console.log(m)
 
 
 let x=[1,2,2,4,5,6]
+
 let s=x
 
 x[1]=97

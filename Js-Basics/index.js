@@ -1,7 +1,7 @@
 const fs =require('fs');
 const os =require('os');
 
-// sync way of reading
+// // sync way of reading
 // let data=fs.readFileSync('./adc.txt','utf-8');
 // console.log(data)
 
@@ -27,11 +27,11 @@ const os =require('os');
 
 
 //Write file
-// fs.writeFileSync('./products.txt','Apple');
+fs.writeFileSync('./products.txt','Apple');
 
-// fs.writeFile('./products.txt','Mongo',(err)=>{
-//     console.log(err);
-// }) 
+fs.writeFile('./products.txt','Mongo',(err)=>{
+    console.log(err);
+}) 
 // removing the past a data and adding new data appale is replaced with mango
 
 
@@ -41,9 +41,9 @@ const os =require('os');
 // })
 
 
+fs.unlinkSync('./products.txt')
 
 
-
-console.log(os.platform())
-console.log(os.hostname())
-console.log(os.type())
+// console.log(os.platform())
+// console.log(os.hostname())
+// console.log(os.type())

@@ -50,7 +50,7 @@ const userSchema = mongoose.Schema({
         min: 20,
         max: 100
     }
-},{timestamps:true})
+}, { timestamps: true })
 
 
 
@@ -95,22 +95,22 @@ const userModel = mongoose.model('users', userSchema);
 
 
 
-// userModel.find({name:"prasad"})
-// .then((data)=>{
-//     console.log(data);
-// })
-// .catch((err)=>{
-//     console.log(err)
-// })
+// userModel.find({ name: "prasa" })
+//     .then((data) => {
+//         console.log(data);
+//     })
+//     .catch((err) => {
+//         console.log(err)
+//     })
 
 
-// userModel.find().sort({age:1})
-// .then((data)=>{
-//     console.log(data);
-// })
-// .catch((err)=>{
-//     console.log(err)
-// })
+userModel.find().sort({age:1})
+.then((data)=>{
+    console.log(data);
+})
+.catch((err)=>{
+    console.log(err)
+})
 
 
 

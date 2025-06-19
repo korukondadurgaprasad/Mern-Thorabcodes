@@ -18,7 +18,7 @@ const app = express();
 // data base connection
 
 
-app.use(express.json());
+app.use(express.json()); // middleware to parse JSON bodies
 
 app.get("/products", (req, res) => {
     res.send({ message: "All Products" })
@@ -55,25 +55,6 @@ app.put("/products/:id",(req,res)=>{
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // app.get("/testing/:id",(req,res)=>{
 //     res.send({message:"Testing"})
 
@@ -96,6 +77,6 @@ app.put("/products/:id",(req,res)=>{
 
 
 app.listen(8000, () => {
-    console.log("server is running on port 8000");
+    console.log("server is running on port 8000"); //testing message
 })
 
